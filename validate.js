@@ -1,19 +1,14 @@
-const path = require('node:path')
-const fs = require('fs')
+const path = require('node:path');
+const fs = require('fs');
+const error = require('node:console');
 
-//Verifica que exista la ruta y si es absoluta o no
+// Verifica que exista la ruta y si es absoluta o no
 const validateRoute = (route) => {
-  if (fs.existsSync(route)) {
-    const validatePath = path.isAbsolute(route)
-    if (validatePath) {
-      console.log('Its an absolute path')
-      return route
-    } else {
-      return path.resolve(route)
-    }
+  if (!fs.existsSync(route)) {
+    console.log('Invalid route or route doesn\'t exist');
+    return undefined;
   }
-  
-  return undefined
+  return path.resolve(route);
 }
 
 module.exports = validateRoute;
