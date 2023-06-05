@@ -1,23 +1,15 @@
 {
     "env": {
+        "browser": true,
         "commonjs": true,
-        "es2021": true,
-        "node": true,
-        "jest": true
+        "es2021": true
     },
-    "extends": [
-        "standard",
-        "plugin:jest/recommended"
-    ],
+    "extends": "standard",
     "overrides": [
     ],
     "parserOptions": {
         "ecmaVersion": "latest"
     },
     "rules": {
-        "linebreak-style": "off"
-    },
-    "plugins": [
-        "jest"
-    ]
+    }
 }

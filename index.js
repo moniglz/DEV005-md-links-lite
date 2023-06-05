@@ -1,9 +1,28 @@
-/* eslint-disable no-console */
-
 const validateRoute = require('./validate');
-const readingFile = require('./readingFile');
+const readingFile = require('./file_reader');
 
-console.log(validateRoute('./sampleFile.md'));
-readingFile('C:/Users/Moni/Documents/Laboratoria/Proyectos/MDLinks/DEV005-md-links-lite/sampleFile.md')
-  .then((read) => (read)
-);
+const filePath = process.argv[2];
+
+// Se valida ruta
+const validatedPath = validateRoute(filePath);
+if (!validatedPath) {
+  console.log('file path doesn\'t exist');
+} else {
+  //Se lee el archivo
+  readingFile(validatedPath)
+    .then((links) => {
+      const results = [];
+      links.forEach((link, index) => {
+        const result = {
+          Link: index + 1,          
+          Text: link.text,
+          URL: link.href,
+        };
+        results.push(result);
+      });
+      console.log('Links found:', results);
+    })
+    .catch((error) => {
+      console.log('An error ocurred while reading the file: ', error.message);
+    });
+}
