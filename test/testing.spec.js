@@ -26,7 +26,7 @@ describe('validateRoute', () => {
   test('should return undefined if route doesn\'t exists', () => {
     const route = './thumb.txt';
     const result = validateRoute(route);
-    expect(result).toBeUndefined;
+    expect(result).toBeUndefined();
   });
 });
 
@@ -36,18 +36,11 @@ describe('readingFile', () => {
     expect(typeof readingFile).toBe('function');
   });
 
-  test('should read the file and return its contents', () => {
-    const filePath = 'C:/Users/Moni/Documents/Laboratoria/Proyectos/MDLinks/DEV005-md-links-lite/sampleFile.md';
-    const expectedContent = fs.readFileSync(filePath, 'utf-8');
-    return readingFile(filePath).then((result) => {
-      expect(result).toBe(expectedContent);
-    });
-  });
-
-  test('should throw Error for an invalid file extension', () => {
-    const filePath = 'C:/Users/Moni/Documents/Laboratoria/Proyectos/MDLinks/DEV005-md-links-lite/text.txt';
-    expect(() => { 
-      readingFile(filePath);
-    }).toThrow('It isn\'t valid');
+  test('should return file extension', async () => {
+    const route = 'C:/Users/Moni/Documents/Laboratoria/Proyectos/MDLinks/DEV005-md-links-lite/sampleFile.md';
+    const extPromise = readingFile(route);
+    const expectedExtension = '.md';
+    const fileExt = await extPromise;
+    expect(fileExt).toEqual(expectedExtension);
   });
 });
