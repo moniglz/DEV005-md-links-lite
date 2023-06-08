@@ -12,8 +12,7 @@ const mdLinks = (path, options) => {
 
   return readingFile(validatedPath)
     .then((result) => {
-      const { extension, links } = result;
-
+      const { links } = result;
       if (!validate) {
         return links.map((link) => ({
           href: link.href,
