@@ -1,0 +1,13 @@
+{
+    "editor.fontSize": 14,
+    "editor.renderWhitespace": "selection",
+    "editor.defaultColorDecorators": false,
+    "workbench.colorTheme": "Pink Candy Dark",
+    "workbench.preferredHighContrastColorTheme": "Pink Candy Dark",
+    "workbench.preferredHighContrastLightColorTheme": "Pink Candy Dark Warm",
+    "workbench.iconTheme": "vs-seti",
+    "workbench.preferredLightColorTheme": "Dark Pink",
+    "terminal.integrated.automationProfile.windows": {},
+    "terminal.integrated.tabs.defaultIcon": "github",
+    "terminal.integrated.localEchoStyle": "dim"
+}
