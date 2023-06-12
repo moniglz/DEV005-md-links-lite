@@ -8,8 +8,8 @@ jest.mock('../file_reader');
 jest.mock('../link_validation');
 
 describe('mdLinks', () => {
-  afterEach(() => {
-    jest.clearAllMocks();
+  test("its a function", () => {
+    expect(typeof validateRoute).toBe("function");
   });
 
   test('should reject with an error if the file path doesn\'t exist', () => {
