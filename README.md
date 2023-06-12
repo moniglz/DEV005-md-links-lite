@@ -29,4 +29,8 @@ algunas estadísticas.
 
 * Cuando se elige no validar: node index.js <ruta-archivo.md>
 
+![example_without_validation](https://raw.githubusercontent.com/moniglz/DEV005-md-links-lite/main/src/no-validation.png)
+
 * Cuando se elige validar: node index.js <ruta-archivo.md> --validate
+
+![example_with_validation](https://raw.githubusercontent.com/moniglz/DEV005-md-links-lite/main/src/validation.png)
