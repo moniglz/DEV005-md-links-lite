@@ -21,12 +21,16 @@ algunas estadísticas.
 
 "MD-links", es una herramienta que permite extraer y validar links dentro de un archivo '.md', el objetivo de este proyecto es ayudar en la verificación de enlaces proporcionando la URL, el texto relacionado al link y la ruta del archivo .md donde está el enlace.
 
-## 3. Diagrama de flujo
-
-![md-links_diagrama-flujo](https://raw.githubusercontent.com/moniglz/DEV005-md-links-lite/main/src/diagrama-flujo.png)
-
-## 4. ¿Cómo ejecutar?
+## 3. ¿Cómo ejecutar?
 
 * Cuando se elige no validar: node index.js <ruta-archivo.md>
 
+![example_without_validation](https://raw.githubusercontent.com/moniglz/DEV005-md-links-lite/main/src/no-validation.png)
+
 * Cuando se elige validar: node index.js <ruta-archivo.md> --validate
+
+![example_with_validation](https://raw.githubusercontent.com/moniglz/DEV005-md-links-lite/main/src/validation.png)
+
+## 4. Diagrama de flujo para el desarrollo del proyecto
+
+![md-links_diagrama-flujo](https://raw.githubusercontent.com/moniglz/DEV005-md-links-lite/main/src/diagrama-flujo.png)
