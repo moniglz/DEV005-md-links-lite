@@ -23,8 +23,7 @@ algunas estadísticas.
 
 ## 3. Diagrama de flujo
 
-![md-links_diagrama-flujo](.src/diagrama-flujo.png)
-
+![md-links_diagrama-flujo](https://raw.githubusercontent.com/moniglz/DEV005-md-links-lite/main/src/diagrama-flujo.png)
 
 ## 4. ¿Cómo ejecutar?
 
