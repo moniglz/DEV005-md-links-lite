@@ -22,26 +22,83 @@ describe('mdLinks', () => {
   });
 
   test('should return an array of links if `validate` option is not provided', () => {
-    const path = 'existing/file.md';
+    const path = 'otherSample.md';
     const options = {};
 
     const expectedResult = [
       {
-        href: 'https://example.com',
-        text: 'Example',
-        file: 'existing/file.md',
+        href: 'https://youtu.be/LlOa6KiiAw0',
+        text: 'Pájaros - Porter',
+        file: 'otheSample.md',
       },
-      // Add more expected link objects here if necessary
+      {
+        href: 'https://agilemanifesto.org/iso/es/manifesto.html',
+        text: 'Manifiesto Ágil',
+        file: 'otheSample.md',
+      },
+      {
+        href: 'https://flexboxfroggy.com/#es',
+        text: 'Game flexbox froggy',
+        file: 'otheSample.md',
+      },
+      {
+        href: 'https://www.happyhueees.com',
+        text: 'Link trampa',
+        file: 'otheSample.md',
+      },
+      {
+        href: 'https://www.happyhues.co/',
+        text: 'Happy Hues',
+        file: 'otheSample.md',
+      },
+      {
+        href: 'https://youtu.be/q07Gd6Q-7dY',
+        text: 'Te quiero tanto. Kevin Kaarl',
+        file: 'otheSample.md',
+      },
+      {
+        href: 'https://youtube.com/fiheoahoif',
+        text: 'Youtube',
+        file: 'otheSample.md',
+      },
     ];
-
     const mockResult = {
       links: [
         {
-          href: 'https://example.com',
-          text: 'Example',
-          file: 'existing/file.md',
+          href: 'https://youtu.be/LlOa6KiiAw0',
+          text: 'Pájaros - Porter',
+          file: 'otheSample.md',
         },
-        // Add more mock link objects here if necessary
+        {
+          href: 'https://agilemanifesto.org/iso/es/manifesto.html',
+          text: 'Manifiesto Ágil',
+          file: 'otheSample.md',
+        },
+        {
+          href: 'https://flexboxfroggy.com/#es',
+          text: 'Game flexbox froggy',
+          file: 'otheSample.md',
+        },
+        {
+          href: 'https://www.happyhueees.com',
+          text: 'Link trampa',
+          file: 'otheSample.md',
+        },
+        {
+          href: 'https://www.happyhues.co/',
+          text: 'Happy Hues',
+          file: 'otheSample.md',
+        },
+        {
+          href: 'https://youtu.be/q07Gd6Q-7dY',
+          text: 'Te quiero tanto. Kevin Kaarl',
+          file: 'otheSample.md',
+        },
+        {
+          href: 'https://youtube.com/fiheoahoif',
+          text: 'Youtube',
+          file: 'otheSample.md',
+        },
       ],
     };
 
@@ -52,30 +109,100 @@ describe('mdLinks', () => {
   });
 
   test('should return an array of validated links if `validate` option is true', () => {
-    const path = 'existing/file.md';
+    const path = 'otherSample.md';
     const options = {
       validate: true,
     };
 
     const expectedResult = [
       {
-        href: 'https://example.com',
-        text: 'Example',
-        file: 'existing/file.md',
+        href: 'https://youtu.be/LlOa6KiiAw0',
+        text: 'Pájaros - Porter',
+        file: 'otherSample.md',
         status: 200,
         ok: true,
       },
-      // Add more expected validated link objects here if necessary
+      {
+        href: 'https://agilemanifesto.org/iso/es/manifesto.html',
+        text: 'Manifiesto Ágil',
+        file: 'otherSample.md',
+        status: 200,
+        ok: true,
+      },
+      {
+        href: 'https://flexboxfroggy.com/#es',
+        text: 'Game flexbox froggy',
+        file: 'otherSample.md',
+        status: 200,
+        ok: true,
+      },
+      {
+        href: 'https://www.happyhueees.com',
+        text: 'Link trampa',
+        file: 'otherSample.md',
+        status: 404,
+        ok: false,
+      },
+      {
+        href: 'https://www.happyhues.co/',
+        text: 'Happy Hues',
+        file: 'otherSample.md',
+        status: 200,
+        ok: true,
+      },
+      {
+        href: 'https://youtu.be/q07Gd6Q-7dY',
+        text: 'Te quiero tanto. Kevin Kaarl',
+        file: 'otherSample.md',
+        status: 200,
+        ok: true,
+      },
+      {
+        href: 'https://youtube.com/fiheoahoif',
+        text: 'Youtube',
+        file: 'otherSample.md',
+        status: 200,
+        ok: true,
+      },
     ];
 
     const mockResult = {
       links: [
         {
-          href: 'https://example.com',
-          text: 'Example',
-          file: 'existing/file.md',
+          href: 'https://youtu.be/LlOa6KiiAw0',
+          text: 'Pájaros - Porter',
+          file: 'otherSample.md',
         },
-        // Add more mock link objects here if necessary
+        {
+          href: 'https://agilemanifesto.org/iso/es/manifesto.html',
+          text: 'Manifiesto Ágil',
+          file: 'otherSample.md',
+        },
+        {
+          href: 'https://flexboxfroggy.com/#es',
+          text: 'Game flexbox froggy',
+          file: 'otherSample.md',
+        },
+        {
+          href: 'https://www.happyhueees.com',
+          text: 'Link trampa',
+          file: 'otherSample.md',
+        },
+        {
+          href: 'https://www.happyhues.co/',
+          text: 'Happy Hues',
+          file: 'otherSample.md',
+        },
+        {
+          href: 'https://youtu.be/q07Gd6Q-7dY',
+          text: 'Te quiero tanto. Kevin Kaarl',
+          file: 'otherSample.md',
+        },
+        {
+          href: 'https://youtube.com/fiheoahoif',
+          text: 'Youtube',
+          file: 'otherSample.md',
+        },
       ],
     };
 
@@ -86,13 +213,3 @@ describe('mdLinks', () => {
     return expect(mdLinks(path, options)).resolves.toEqual(expectedResult);
   });
 });
-
-
-
-
-
-// describe('mdLinks', () => {
-//   it('should return an array', () => {
-//     console.log('FIX ME!');
-//   });
-// });
